@@ -4,12 +4,6 @@ FROM ubuntu:latest
 MAINTAINER Kiran Vemula "kiran@test.com"
 
 RUN apt-get update
-RUN apt-get install -y python python-pip wget
-RUN pip install Flask
-
-ADD hello.py /home/hello.py
+RUN apt-get install apache2 -y
 
 WORKDIR /home
-
-# tell docker what port to expose
-EXPOSE 8000
